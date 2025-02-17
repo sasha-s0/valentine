@@ -1,6 +1,6 @@
 import {Route, Routes, useLocation, useNavigate} from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import Letter from "./pages/Letter.jsx";
+import Heart from "./pages/Heart.jsx";
+import WillYouBeMyValentine from "./pages/WillYouBeMyValentine.jsx";
 import Gallery from "./pages/Gallery.jsx";
 import {useEffect} from "react";
 
@@ -19,8 +19,8 @@ const App = () => {
         <>
             <Routes>
                 <Route path="/" element={<h2>Love is loading...</h2>}/>
-                <Route path="/heart" element={<Home/>}/>
-                <Route path="/valentine" element={<Letter/>}/>
+                <Route path="/heart" element={<Heart/>}/>
+                <Route path="/valentine" element={<WillYouBeMyValentine/>}/>
                 <Route path="/gallery" element={<Gallery/>}/>
             </Routes>
         </>
