@@ -21,7 +21,7 @@ const SheSaidYes = () => {
             }, 1000);
             return () => clearTimeout(timeoutId);
         } else {
-            navigate("/secret");
+            navigate("/protected");
         }
     }, [secondsLeft, navigate]);
 

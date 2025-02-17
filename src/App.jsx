@@ -1,29 +1,27 @@
-import {Route, Routes, useLocation, useNavigate} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 import Heart from "./pages/Heart.jsx";
 import WillYouBeMyValentine from "./pages/WillYouBeMyValentine.jsx";
 import Gallery from "./pages/Gallery.jsx";
-import {useEffect} from "react";
 import SheSaidYes from "./pages/SheSaidYes.jsx";
+import ProtectInformation from "./pages/ProtectInformation.jsx";
+
+const SECRET_KEY = import.meta.env.VITE_SECRET_KEY;
+
+// eslint-disable-next-line react/prop-types
+const RequireAuth = ({children}) => {
+    const key = localStorage.getItem("SECRET_KEY");
+    return key === SECRET_KEY ? children : <Navigate to="/heart" replace />;
+};
 
 const App = () => {
-    const navigate = useNavigate();
-    const location = useLocation();
-
-    useEffect(() => {
-        if (location.pathname === '/') {
-            navigate("/heart", {replace: true});
-        }
-    }, [location.pathname, navigate]);
-
-
     return (
         <>
             <Routes>
-                <Route path="*" element={<h2 className="min-h-dvh min-w-dvw flex justify-center items-center">Вы попали куда-то не туда...</h2>}/>
-                <Route path="/heart" element={<Heart/>}/>
+                <Route path="*" element={<Heart/>}/>
                 <Route path="/beMyValentine" element={<WillYouBeMyValentine/>}/>
                 <Route path="/sheSaidYes" element={<SheSaidYes/>}/>
-                <Route path="/gallery" element={<Gallery/>}/>
+                <Route path="/protected" element={<ProtectInformation/>}/>
+                <Route path="/gallery" element={<RequireAuth><Gallery /></RequireAuth>} />
             </Routes>
         </>
     );
