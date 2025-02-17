@@ -11,7 +11,7 @@ const messages = [
     "Если ты скажешь нет, я расстроюсь...",
     "Я очень сильно расстроюсь...",
     "Я очень очень очень сильно расстроюсь...",
-    "За што... Сашка...",
+    "За что...",
     "А кто Новоуральск то штурмом взял?",
     "Похоже, я не могу оставить тебе право выбора...",
 ];
@@ -27,7 +27,7 @@ const WillYouBeMyValentine = () => {
             setMaxWidth(window.innerWidth - 8);
         };
 
-        updateMaxWidth(); // Вызываем при монтировании
+        updateMaxWidth();
         window.addEventListener("resize", updateMaxWidth);
         return () => window.removeEventListener("resize", updateMaxWidth);
     }, []);
@@ -44,7 +44,7 @@ const WillYouBeMyValentine = () => {
                 <button
                     className="bg-green-500 text-white font-semibold rounded-lg px-6 py-3 transition-transform active:scale-90 w-fit cursor-pointer"
                     style={{ fontSize: `${yesButtonSize}px`, maxWidth: `${maxWidth}px` }}
-                    onClick={() => navigate("/gallery", { replace: true })}
+                    onClick={() => navigate("/sheSaidYes")}
                 >
                     Да!
                 </button>
@@ -60,8 +60,8 @@ const WillYouBeMyValentine = () => {
             <div className="mt-6">
                 <img
                     className=""
-                    src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif"
-                    alt="Cute GIF"
+                    src="../../public/BeMine.webp"
+                    alt="Тут должна быть милая гифка!"
                 />
             </div>
         </div>

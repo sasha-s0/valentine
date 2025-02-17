@@ -170,7 +170,7 @@ const HeartCanvas = () => {
                 alignItems: "center",
                 background: "black",
             }}
-            onClick={() => navigate("/valentine")} // Редирект по клику
+            onClick={() => navigate("/beMyValentine")}
         >
             <canvas ref={canvasRef} style={{cursor: "pointer"}}/>
         </div>
