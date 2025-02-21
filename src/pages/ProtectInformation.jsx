@@ -11,7 +11,7 @@ const ProtectInformation = () => {
         const key = localStorage.getItem("SECRET_KEY");
 
         if (key === SECRET_KEY) {
-            navigate("/next-page");
+            navigate("/letter");
         }
     }, [SECRET_KEY, navigate]);
 
@@ -26,7 +26,7 @@ const ProtectInformation = () => {
     const handleSubmit = () => {
         if (inputDate === SECRET_DATE) {
             localStorage.setItem("SECRET_KEY", SECRET_KEY);
-            navigate("/next-page");
+            navigate("/letter");
         } else {
             setError(true);
             setInputDate("");

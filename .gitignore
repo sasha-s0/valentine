@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 .env
+/src/const/letterPages.js
 
 # Editor directories and files
 .vscode/*
