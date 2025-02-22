@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import {useNavigate} from "react-router-dom";
 
 const images = [
-    "../public/assets/gallery/0.jpg",
+    "./assets/gallery/0.jpg",
     "../assets/gallery/1.jpg",
     "../assets/gallery/2.jpg",
     "../assets/gallery/3.jpg",
