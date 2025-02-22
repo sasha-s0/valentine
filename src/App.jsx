@@ -18,12 +18,12 @@ const App = () => {
     return (
         <>
             <Routes>
-                <Route path="*" element={<h1>S</h1>}/>
+                <Route path="*" element={<Heart/>}/>
                 <Route path="/beMyValentine" element={<WillYouBeMyValentine/>}/>
                 <Route path="/sheSaidYes" element={<SheSaidYes/>}/>
                 <Route path="/protected" element={<ProtectInformation/>}/>
-                <Route path="/letter" element={<RequireAuth><Letter /></RequireAuth>} />
                 <Route path="/gallery" element={<RequireAuth><Gallery /></RequireAuth>} />
+                <Route path="/letter" element={<RequireAuth><Letter /></RequireAuth>} />
             </Routes>
         </>
     );
