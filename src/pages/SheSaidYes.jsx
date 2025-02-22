@@ -32,7 +32,7 @@ const SheSaidYes = () => {
             </h1>
             <div className="w-full max-w-md">
                 <img
-                    src="../../public/assets/yesGif.webp"
+                    src="./assets/yesGif.webp"
                     alt="Милейшая гифка"
                     className="w-full"
                 />

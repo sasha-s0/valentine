@@ -60,7 +60,7 @@ const WillYouBeMyValentine = () => {
             <div className="mt-6">
                 <img
                     className=""
-                    src="../../public/assets/BeMine.webp"
+                    src="./assets/BeMine.webp"
                     alt="Тут должна быть милая гифка!"
                 />
             </div>
