@@ -29,7 +29,19 @@ const Letter = () => {
         <div className="flex items-center justify-center min-h-dvh bg-pink-200 px-2 p-10">
             <div className="w-[500px] min-h-[400px] bg-white p-4 rounded-2xl shadow-lg flex flex-col justify-between">
                 <p className="text-gray-500 text-sm md:text-base whitespace-pre-line">
-                    {letterPages[currentPage]}
+                    {
+                        currentPage === 0? (
+                            <p>
+                                Updates: <br/>
+                                <span
+                                    className="text-blue-600 underline cursor-pointer"
+                                    onClick={() => setCurrentPage(9)}
+                                >
+                                    №1 - 13.05.2025
+                                </span>
+                            </p>
+                        ) : letterPages[currentPage]
+                    }
                 </p>
                 <div className="flex justify-between items-center mt-10 pt-4 border-t-1 border-gray-500">
                     <div>
