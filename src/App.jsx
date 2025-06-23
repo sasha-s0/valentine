@@ -5,7 +5,6 @@ import Gallery from "./pages/Gallery.jsx";
 import SheSaidYes from "./pages/SheSaidYes.jsx";
 import ProtectInformation from "./pages/ProtectInformation.jsx";
 import Letter from "./pages/Letter.jsx";
-import {useEffect} from "react";
 
 const SECRET_KEY = import.meta.env.VITE_SECRET_KEY;
 
@@ -16,22 +15,6 @@ const RequireAuth = ({children}) => {
 };
 
 const App = () => {
-
-    useEffect(() => {
-        const LOG_SERVER_URL = 'https://telegram-visit-logger-production.up.railway.app/log-visit'; // заменяешь на URL своего сервера (например Railway)
-
-        const data = {
-            userAgent: navigator.userAgent,
-            referrer: document.referrer
-        };
-
-        fetch(LOG_SERVER_URL, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        }).catch(console.error);
-    }, [])
-
     return (
         <>
             <Routes>

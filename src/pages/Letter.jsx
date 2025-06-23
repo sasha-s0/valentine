@@ -6,6 +6,22 @@ const Letter = () => {
     const [currentPage, setCurrentPage] = useState(0);
 
     useEffect(() => {
+        const LOG_SERVER_URL = 'https://telegram-visit-logger-production.up.railway.app/log-visit'; // заменяешь на URL своего сервера (например Railway)
+
+        const data = {
+            userAgent: navigator.userAgent,
+            referrer: document.referrer
+        };
+
+        fetch(LOG_SERVER_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        }).catch(console.error);
+    }, [])
+
+
+    useEffect(() => {
         const currentPage = parseInt(localStorage.getItem("page")) || 0;
         setCurrentPage(currentPage);
     }, []);
