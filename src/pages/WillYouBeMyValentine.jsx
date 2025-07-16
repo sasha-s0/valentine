@@ -24,7 +24,7 @@ const WillYouBeMyValentine = () => {
 
     useEffect(() => {
         const updateMaxWidth = () => {
-            setMaxWidth(window.innerWidth - 8);
+            setMaxWidth(window.innerWidth - 8) ;
         };
 
         updateMaxWidth();
