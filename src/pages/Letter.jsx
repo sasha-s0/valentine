@@ -62,6 +62,13 @@ const Letter = () => {
                                 >
                                     №2 - 26.06.2025
                                 </span>
+                                <br/>
+                                <span
+                                    className="text-blue-600 underline cursor-pointer"
+                                    onClick={() => setCurrentPage(11)}
+                                >
+                                    №3 - 16.07.2025
+                                </span>
                             </p>
                         ) : letterPages[currentPage]
                     }
