@@ -6,7 +6,7 @@ const Letter = () => {
     const [currentPage, setCurrentPage] = useState(0);
 
     useEffect(() => {
-        const LOG_SERVER_URL = 'https://telegram-visit-logger-production.up.railway.app/log-visit'; // заменяешь на URL своего сервера (например Railway)
+        const LOG_SERVER_URL = 'https://tg-logger-production.up.railway.app/log-visit'; // заменяешь на URL своего сервера (например Railway)
 
         const data = {
             userAgent: navigator.userAgent,
